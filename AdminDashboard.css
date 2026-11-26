@@ -1,0 +1,343 @@
+.admin-page {
+  width: min(1120px, calc(100% - 40px));
+  min-height: 70vh;
+  margin: 40px auto 64px;
+}
+
+.admin-heading {
+  margin-bottom: 24px;
+}
+
+.admin-heading h1 {
+  margin: 12px 0 5px;
+  color: #20233c;
+  font: 800 clamp(28px, 4vw, 36px)/1.15 Manrope, sans-serif;
+  letter-spacing: -1.2px;
+}
+
+.admin-heading p,
+.admin-management-heading p {
+  margin: 0;
+  color: #7d8298;
+  font-size: 13px;
+}
+
+.admin-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #f0e9ff;
+  color: #7b37dc;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.admin-stat {
+  min-height: 88px;
+  padding: 15px 16px;
+  border: 1px solid;
+  border-radius: 13px;
+}
+
+.admin-stat > span {
+  color: #7d8298;
+  font-size: 12px;
+}
+
+.admin-stat > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+
+.admin-stat strong {
+  font: 800 24px Manrope, sans-serif;
+}
+
+.admin-stat svg {
+  width: 31px;
+  height: 31px;
+  padding: 7px;
+  border-radius: 9px;
+  color: white;
+  filter: drop-shadow(0 3px 4px #20233c22);
+}
+
+.stat-purple { border-color: #eadbff; background: #fcf9ff; color: #8d36e8; }
+.stat-purple svg { background: #9c3cf0; }
+.stat-blue { border-color: #d6e5ff; background: #f8fbff; color: #3478ec; }
+.stat-blue svg { background: #3478ec; }
+.stat-amber { border-color: #f5e6b3; background: #fffdf6; color: #b67a00; }
+.stat-amber svg { background: #e7a900; }
+.stat-green { border-color: #d1f1df; background: #f7fdf9; color: #16a45d; }
+.stat-green svg { background: #18b566; }
+
+.admin-management {
+  overflow: hidden;
+  border: 1px solid #e8e8f1;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 8px 26px #25204a08;
+}
+
+.admin-management-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px 14px;
+}
+
+.admin-management-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 5px;
+  color: #292b44;
+  font: 700 18px Manrope, sans-serif;
+}
+
+.admin-management-heading h2 svg {
+  color: #8e3de6;
+}
+
+.admin-result-count {
+  flex: none;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: linear-gradient(110deg, #a435e8, #4264ec);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.admin-filters {
+  display: grid;
+  grid-template-columns: minmax(200px, 1.2fr) repeat(3, minmax(140px, 1fr));
+  gap: 9px;
+  padding: 0 20px 16px;
+  border-bottom: 1px solid #eef0f6;
+  background: #fcfcff;
+}
+
+.admin-filters > select,
+.admin-manage-panel select {
+  min-width: 0;
+  padding: 9px 11px;
+  border-color: #e4e6ef;
+  border-radius: 8px;
+  color: #555b70;
+  font-size: 12px;
+}
+
+.admin-search {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border: 1px solid #e4e6ef;
+  border-radius: 8px;
+  background: white;
+  color: #9a9db0;
+}
+
+.admin-search input {
+  min-width: 0;
+  padding: 9px 0;
+  border: 0;
+  box-shadow: none;
+  font-size: 12px;
+}
+
+.admin-search input:focus {
+  box-shadow: none;
+}
+
+.admin-complaints {
+  display: grid;
+  gap: 12px;
+  padding: 14px 16px 18px;
+  background: #fbfbfe;
+}
+
+.admin-complaint {
+  padding: 15px 16px;
+  border: 1px solid #e8eaf1;
+  border-left: 3px solid #29c77a;
+  border-radius: 11px;
+  background: white;
+}
+
+.admin-complaint-top,
+.admin-tags,
+.admin-complaint-footer {
+  display: flex;
+  align-items: center;
+}
+
+.admin-complaint-top {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.admin-tags {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.admin-tag {
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.tag-id { background: #f5eaff; color: #8b3cdb; }
+.tag-status { background: #e9f8ef; color: #218651; }
+.status-in-progress { background: #fff4dc; color: #a96800; }
+.status-resolved { background: #e9f8ef; color: #218651; }
+.status-rejected { background: #fff0ef; color: #b43935; }
+.tag-priority { background: #fff1e2; color: #b3651f; }
+.priority-high { background: #ffebeb; color: #b42318; }
+.priority-low { background: #edf5ff; color: #3d6caa; }
+.tag-category { border-color: #e7e8ef; background: #fafaff; color: #62677c; }
+
+.admin-manage-button {
+  flex: none;
+  padding: 8px 13px;
+  border: 0;
+  border-radius: 8px;
+  background: linear-gradient(110deg, #a435e8, #4264ec);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.admin-manage-button:hover {
+  filter: brightness(.96);
+}
+
+.admin-complaint h3 {
+  margin: 11px 0 5px;
+  color: #292b44;
+  font: 700 16px Manrope, sans-serif;
+}
+
+.admin-description {
+  margin: 0;
+  color: #73788d;
+  font-size: 13px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
+.admin-complaint-footer {
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  color: #85899c;
+  font-size: 11px;
+}
+
+.admin-complaint-footer span,
+.admin-complaint-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin-complaint-footer a {
+  color: #7046cf;
+  font-weight: 700;
+}
+
+.admin-manage-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px solid #eef0f6;
+}
+
+.admin-manage-panel label {
+  width: min(100%, 210px);
+  gap: 6px;
+  color: #62677c;
+  font-size: 11px;
+}
+
+.admin-empty {
+  padding: 38px 20px;
+  color: #7d8298;
+  text-align: center;
+  font-size: 13px;
+}
+
+.admin-error {
+  margin: 14px 20px 0;
+  padding: 11px 13px;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #b42318;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .admin-page {
+    width: min(100% - 28px, 600px);
+    margin-top: 26px;
+  }
+
+  .admin-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .admin-filters {
+    grid-template-columns: 1fr 1fr;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .admin-search {
+    grid-column: 1 / -1;
+  }
+
+  .admin-management-heading {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .admin-complaints {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .admin-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-search {
+    grid-column: auto;
+  }
+
+  .admin-complaint-top {
+    align-items: flex-start;
+  }
+}
