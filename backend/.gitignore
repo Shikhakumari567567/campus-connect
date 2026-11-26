@@ -1,0 +1,10 @@
+cd ~/Desktop/campus-connect
+
+cat > .gitignore <<'EOF'
+node_modules/
+.env
+.env.*
+!.env.example
+.vercel/
+dist/
+EOF
